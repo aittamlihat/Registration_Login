@@ -1,8 +1,8 @@
 <?php 
-define('DB_HOST','dbod-hgtd-pdb.cern.ch');
-define('DB_USER','admin');
-define('DB_PASS','HGTDdatabase');
-define('DB_NAME','testing');
+define('DB_HOST','');
+define('DB_USER','');
+define('DB_PASS','');
+define('DB_NAME','');
 // Establish database connection.
 try
 {
