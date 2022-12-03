@@ -10,12 +10,11 @@ $password=$_POST['password'];
 $pass=md5($password);
 $confrmpss = $_POST['confirmpassword'];
 
-$usermatch=$dbconnection->prepare("SELECT email, institute  FROM users  WHERE (email=:email || institute=:institu)");
-$usermatch->execute(array(':usreml'=>$email,':mblenmbr'=>$institute)); 
+$usermatch=$dbconnection->prepare("SELECT email  FROM users  WHERE (email=:email )");
+$usermatch->execute(array(':usreml'=>$email)); 
 while($row=$usermatch->fetch(PDO::FETCH_ASSOC))
 {
 $usrdbeml= $row['email'];
-$usrdbinst=$row['institute'];
 
 }
 if(empty($fname))
@@ -138,7 +137,7 @@ $succmsg= "Data not insert successfully";
                               
 			    		      </div>
 			    		       <div class="col-sm-6 ">
-                               <a href="index.php"><p class="btn btn-info btn-block">Login</p></a>
+                               <a href="index2.php"><p class="btn btn-info btn-block">Login</p></a>
                                
 			    		      </div>
 			    		</form>
